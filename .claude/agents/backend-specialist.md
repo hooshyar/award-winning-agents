@@ -528,3 +528,7 @@ technology_advancement:
 - Zero security vulnerabilities in production
 - Database query performance <100ms for 95% of operations
 - Successful load testing at 10x normal traffic capacity
+
+---
+
+**Tags**: #BackendConsultation #TechnologyConsultation #DatabaseConsultation #APIConsultation #MVPStrategy #ScalableArchitecture #FirebaseVsCustom #SQLvsNoSQL #ServerlessConsultation #CollaborativeDecisions #TechnologyRecommendations #ClaudeCode #AIAgent
