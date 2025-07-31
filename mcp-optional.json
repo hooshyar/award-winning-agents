@@ -1,0 +1,114 @@
+{
+  "description": "Optional MCP Server Integrations - Advanced Features",
+  "version": "1.0.0",
+  "note": "These integrations are COMPLETELY OPTIONAL. All agents work perfectly without them.",
+  "usage": "Only enable these if you want enhanced team collaboration and external service integration",
+  
+  "mcpServers": {
+    "github": {
+      "command": "uvx",
+      "args": ["mcp-server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PAT}"
+      },
+      "description": "OPTIONAL: GitHub integration for version control, issues, and CI/CD workflows",
+      "benefits": "Enhanced code review, automated issue tracking, deployment coordination"
+    },
+    "web-fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
+      "description": "OPTIONAL: Web research and documentation lookup (no setup required)",
+      "benefits": "Current technology research, implementation guides, best practices lookup"
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@figma/mcp-server"],
+      "env": {
+        "FIGMA_ACCESS_TOKEN": "${FIGMA_TOKEN}"
+      },
+      "description": "OPTIONAL: Figma design system integration",
+      "benefits": "Design-to-code workflows, component synchronization, design system consistency"
+    },
+    "slack": {
+      "command": "uvx",
+      "args": ["mcp-server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+        "SLACK_SIGNING_SECRET": "${SLACK_SIGNING_SECRET}"
+      },
+      "description": "OPTIONAL: Team communication and workflow automation",
+      "benefits": "Automated status updates, team coordination, deployment notifications"
+    },
+    "linear": {
+      "command": "uvx",
+      "args": ["mcp-server-linear"],
+      "env": {
+        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
+      },
+      "description": "OPTIONAL: Project management and issue tracking",
+      "benefits": "Sprint planning integration, progress tracking, milestone management"
+    },
+    "sentry": {
+      "command": "npx",
+      "args": ["-y", "@sentry/mcp-server"],
+      "env": {
+        "SENTRY_AUTH_TOKEN": "${SENTRY_AUTH_TOKEN}",
+        "SENTRY_ORG": "${SENTRY_ORG_SLUG}"
+      },
+      "description": "OPTIONAL: Error monitoring and debugging support",
+      "benefits": "Production error tracking, performance monitoring, debugging insights"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp-server"],
+      "description": "OPTIONAL: E2E testing and performance monitoring (no setup required)",
+      "benefits": "Cross-browser testing, performance validation, accessibility testing"
+    },
+    "firebase": {
+      "command": "npx",
+      "args": ["-y", "@firebase/mcp-server"],
+      "description": "OPTIONAL: Firebase backend services integration",
+      "benefits": "Simplified backend development, authentication, real-time database"
+    },
+    "apidog": {
+      "command": "npx",
+      "args": ["-y", "@apidog/mcp-server"],
+      "env": {
+        "APIDOG_TOKEN": "${APIDOG_API_KEY}"
+      },
+      "description": "OPTIONAL: API documentation and testing",
+      "benefits": "API design collaboration, automated testing, documentation generation"
+    }
+  },
+
+  "setupInstructions": {
+    "whenToUse": "Only if you want enhanced team collaboration and external service integration",
+    "howToEnable": [
+      "1. Copy mcp-optional.json content to your .mcp.json file",
+      "2. Copy .env.example to .env and add only the API keys you want to use",
+      "3. Remove any servers you don't want from the mcpServers section",
+      "4. Run 'claude --doctor' to verify"
+    ],
+    "minimalistApproach": "Start with just web-fetch and playwright (no API keys needed)",
+    "teamApproach": "Add github and slack for team coordination",
+    "enterpriseApproach": "Add all servers for maximum integration"
+  },
+
+  "gracefulDegradation": {
+    "withoutMCP": "All agents work perfectly using Claude's native capabilities",
+    "withBasicMCP": "web-fetch and playwright add research and testing capabilities",
+    "withTeamMCP": "github and slack enable team coordination",
+    "withFullMCP": "Complete integration across all development and collaboration tools"
+  },
+
+  "environmentVariables": {
+    "GITHUB_PAT": "GitHub Personal Access Token (optional - only for GitHub integration)",
+    "FIGMA_TOKEN": "Figma API token (optional - only for design system work)",
+    "SLACK_BOT_TOKEN": "Slack bot token (optional - only for team communication)",
+    "SLACK_SIGNING_SECRET": "Slack signing secret (optional - only for team communication)",
+    "SENTRY_AUTH_TOKEN": "Sentry authentication token (optional - only for error monitoring)",
+    "SENTRY_ORG_SLUG": "Sentry organization slug (optional - only for error monitoring)",
+    "LINEAR_API_KEY": "Linear API key (optional - only for project management)",
+    "APIDOG_API_KEY": "Apidog API key (optional - only for API documentation)"
+  }
+}

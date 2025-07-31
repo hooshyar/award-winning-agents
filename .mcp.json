@@ -1,97 +1,21 @@
 {
-  "description": "Award-Winning Development Team MCP Configuration",
+  "description": "Award-Winning Development Team - Zero Setup Required! All agents work out of the box.",
   "version": "1.0.0",
-  "mcpServers": {
-    "flutter-tools": {
-      "command": "uvx",
-      "args": ["mcp-flutter-tools"],
-      "description": "Flutter SDK integration, hot reload, and mobile development tools"
-    },
-    "firebase": {
-      "command": "npx",
-      "args": ["-y", "@firebase/mcp-server"],
-      "description": "Firebase integration for backend services, authentication, and analytics"
-    },
-    "github": {
-      "command": "uvx",
-      "args": ["mcp-server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PAT}"
-      },
-      "description": "GitHub integration for version control, issues, and CI/CD workflows"
-    },
-    "figma": {
-      "command": "npx",
-      "args": ["-y", "@figma/mcp-server"],
-      "env": {
-        "FIGMA_ACCESS_TOKEN": "${FIGMA_TOKEN}"
-      },
-      "description": "Figma design system integration and design-to-code workflows"
-    },
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@playwright/mcp-server"],
-      "description": "E2E testing, performance monitoring, and accessibility validation"
-    },
-    "web-fetch": {
-      "command": "uvx",
-      "args": ["mcp-server-fetch"],
-      "description": "Documentation lookup, research, and external content integration"
-    },
-    "apidog": {
-      "command": "npx",
-      "args": ["-y", "@apidog/mcp-server"],
-      "env": {
-        "APIDOG_TOKEN": "${APIDOG_API_KEY}"
-      },
-      "description": "API documentation, testing, and code generation"
-    },
-    "slack": {
-      "command": "uvx",
-      "args": ["mcp-server-slack"],
-      "env": {
-        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
-        "SLACK_SIGNING_SECRET": "${SLACK_SIGNING_SECRET}"
-      },
-      "description": "Team communication, notifications, and workflow automation"
-    },
-    "sentry": {
-      "command": "npx",
-      "args": ["-y", "@sentry/mcp-server"],
-      "env": {
-        "SENTRY_AUTH_TOKEN": "${SENTRY_AUTH_TOKEN}",
-        "SENTRY_ORG": "${SENTRY_ORG_SLUG}"
-      },
-      "description": "Error monitoring, performance tracking, and debugging support"
-    },
-    "linear": {
-      "command": "uvx",
-      "args": ["mcp-server-linear"],
-      "env": {
-        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
-      },
-      "description": "Project management, issue tracking, and sprint planning"
-    }
-  },
-  "environmentVariables": {
-    "GITHUB_PAT": "GitHub Personal Access Token for repository access",
-    "FIGMA_TOKEN": "Figma API token for design system integration",
-    "APIDOG_API_KEY": "Apidog API key for API documentation and testing",
-    "SLACK_BOT_TOKEN": "Slack bot token for team communication",
-    "SLACK_SIGNING_SECRET": "Slack signing secret for webhook verification",
-    "SENTRY_AUTH_TOKEN": "Sentry authentication token for error monitoring",
-    "SENTRY_ORG_SLUG": "Sentry organization slug",
-    "LINEAR_API_KEY": "Linear API key for project management"
-  },
+  "mcpServers": {},
   "teamConfiguration": {
-    "defaultFlags": ["--validate", "--uc", "--c7"],
+    "defaultFlags": ["--validate", "--uc"],
     "qualityGates": {
-      "codeReview": "Required before merge",
-      "securityScan": "Automated on every commit",
-      "performanceTest": "Required for production deployments",
-      "accessibilityAudit": "Required for UI changes"
+      "codeReview": "AI-assisted analysis with security and performance checks",
+      "testing": "Strategic testing focused on crucial features",
+      "accessibility": "WCAG 2.1 AA+ compliance validation",
+      "performance": "Core Web Vitals and mobile performance standards"
     },
     "automationLevel": "high",
-    "complianceStandards": ["WCAG 2.1 AA", "OWASP Top 10", "Mobile Security"]
+    "complianceStandards": ["WCAG 2.1 AA+", "OWASP Top 10", "Mobile Security"]
+  },
+  "usage": {
+    "quickStart": "claude 'Hello! Show me available agents for Flutter development.'",
+    "zeroSetup": "All 13 agents work immediately without any configuration",
+    "optionalEnhancements": "See mcp-optional.json for advanced integrations"
   }
 }
