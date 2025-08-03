@@ -141,6 +141,20 @@ This is an **Award-Winning Development Team Agents** system - a comprehensive Cl
 
 ## Architecture & Patterns
 
+### CRITICAL: Always Delegate to Specialized Agents
+**Claude Code should ALWAYS try delegating to specialized agents before using the general agent. The 15-agent team provides expert-level assistance that the general agent cannot match.**
+
+**Quick Delegation Guide:**
+- Context/Memory issues → `context-manager`
+- Research/Solutions → `research-specialist` 
+- Flutter/Mobile → `flutter-senior`
+- Web Frontend → `frontend-specialist`
+- Backend/API → `backend-specialist`
+- DevOps/Deploy → `devops-engineer`
+- Documentation → `documentation-coordinator`
+- Testing Strategy → `testing-strategy-coordinator`
+- Security → `security-specialist`
+
 ### Complete AI Software Engineering Team (15 Agents)
 
 The system implements a comprehensive software engineering team with specialized workflow optimization agents to solve common Claude Code issues:
