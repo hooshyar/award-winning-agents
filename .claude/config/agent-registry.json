@@ -1,0 +1,190 @@
+{
+  "agents": [
+    {
+      "name": "deep-research-issue-fixer",
+      "file": "agents/deep-research-issue-fixer.md",
+      "priority": 10,
+      "domains": ["debugging", "troubleshooting", "analysis", "research"],
+      "primary_keywords": ["debug", "error", "issue", "problem", "bug", "broken", "not working", "fails", "crashes", "exception", "stack trace"],
+      "secondary_keywords": ["investigate", "analyze", "research", "root cause", "troubleshoot", "diagnose", "fix"],
+      "activation_patterns": ["debug.*", "error.*", "issue.*", "problem.*", "bug.*", "not working.*", "fails.*", "crashes.*"],
+      "activation_threshold": 0.8,
+      "fallback": ["qa-testing-specialist", "research-specialist", "tech-lead-architect"],
+      "auto_delegate": true
+    },
+    {
+      "name": "flutter-mobile-development",
+      "file": "agents/flutter-mobile-development.md",
+      "priority": 9,
+      "domains": ["mobile", "flutter", "cross-platform", "ios", "android"],
+      "primary_keywords": ["flutter", "mobile", "ios", "android", "dart", "widget"],
+      "secondary_keywords": ["app", "material", "cupertino", "cross-platform", "native"],
+      "activation_patterns": ["flutter.*", "mobile.*", "(ios|android).*", "dart.*"],
+      "activation_threshold": 0.8,
+      "fallback": ["tech-lead-architect", "frontend-specialist"],
+      "auto_delegate": true
+    },
+    {
+      "name": "tech-lead-architect",
+      "file": "agents/tech-lead-architect.md",
+      "priority": 8,
+      "domains": ["architecture", "system design", "scalability", "technical leadership"],
+      "primary_keywords": ["architecture", "design", "scalability", "system", "technical leadership"],
+      "secondary_keywords": ["patterns", "microservices", "monolith", "distributed", "scaling"],
+      "activation_patterns": ["architect.*", "design.*", "system.*", "scalab.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["backend-specialist", "devops-engineer"],
+      "auto_delegate": true
+    },
+    {
+      "name": "frontend-specialist",
+      "file": "agents/frontend-specialist.md",
+      "priority": 8,
+      "domains": ["frontend", "web", "ui", "ux", "responsive"],
+      "primary_keywords": ["frontend", "web", "ui", "ux", "responsive", "html", "css", "javascript"],
+      "secondary_keywords": ["react", "vue", "angular", "component", "interface"],
+      "activation_patterns": ["frontend.*", "web.*", "(ui|ux).*", "(html|css|javascript).*"],
+      "activation_threshold": 0.7,
+      "fallback": ["tech-lead-architect", "web-creative"],
+      "auto_delegate": true
+    },
+    {
+      "name": "backend-specialist",
+      "file": "agents/backend-specialist.md",
+      "priority": 8,
+      "domains": ["backend", "api", "database", "server"],
+      "primary_keywords": ["backend", "api", "database", "server", "microservice"],
+      "secondary_keywords": ["rest", "graphql", "sql", "nosql", "crud"],
+      "activation_patterns": ["backend.*", "api.*", "database.*", "server.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["tech-lead-architect", "devops-engineer"],
+      "auto_delegate": true
+    },
+    {
+      "name": "devops-engineer",
+      "file": "agents/devops-engineer.md",
+      "priority": 8,
+      "domains": ["devops", "deployment", "ci/cd", "infrastructure"],
+      "primary_keywords": ["devops", "deploy", "ci", "cd", "infrastructure", "docker"],
+      "secondary_keywords": ["kubernetes", "aws", "azure", "gcp", "pipeline"],
+      "activation_patterns": ["devops.*", "deploy.*", "(ci|cd).*", "docker.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["tech-lead-architect", "backend-specialist"],
+      "auto_delegate": true
+    },
+    {
+      "name": "qa-testing-specialist",
+      "file": "agents/qa-testing-specialist.md",
+      "priority": 8,
+      "domains": ["testing", "quality assurance", "automation", "validation"],
+      "primary_keywords": ["test", "testing", "qa", "quality", "automation"],
+      "secondary_keywords": ["unit", "integration", "e2e", "validation", "coverage"],
+      "activation_patterns": ["test.*", "qa.*", "quality.*", "automat.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["deep-research-issue-fixer", "tech-lead-architect"],
+      "auto_delegate": true
+    },
+    {
+      "name": "integration-coordinator",
+      "file": "agents/integration-coordinator.md",
+      "priority": 7,
+      "domains": ["integration", "coordination", "cross-platform", "documentation"],
+      "primary_keywords": ["integration", "coordination", "cross-platform", "documentation"],
+      "secondary_keywords": ["sync", "coordinate", "manage", "organize"],
+      "activation_patterns": ["integrat.*", "coordinat.*", "cross.*platform.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["tech-lead-architect", "documentation-coordinator"],
+      "auto_delegate": true
+    },
+    {
+      "name": "kurdish-specialist",
+      "file": "agents/kurdish-specialist.md",
+      "priority": 9,
+      "domains": ["kurdish", "localization", "rtl", "internationalization"],
+      "primary_keywords": ["kurdish", "kurdî", "sorani", "rtl", "right-to-left"],
+      "secondary_keywords": ["localization", "i18n", "translation", "kurdistan"],
+      "activation_patterns": ["kurdish.*", "kurdî.*", "sorani.*", "rtl.*"],
+      "activation_threshold": 0.9,
+      "fallback": ["frontend-specialist", "integration-coordinator"],
+      "auto_delegate": true
+    },
+    {
+      "name": "context-manager",
+      "file": "agents/context-manager.md",
+      "priority": 8,
+      "domains": ["context", "memory", "session", "continuity"],
+      "primary_keywords": ["context", "memory", "session", "where were we", "current state"],
+      "secondary_keywords": ["remember", "restore", "continue", "previous"],
+      "activation_patterns": ["context.*", "where.*were.*we", "current.*state"],
+      "activation_threshold": 0.8,
+      "fallback": ["integration-coordinator", "documentation-coordinator"],
+      "auto_delegate": true
+    },
+    {
+      "name": "documentation-coordinator",
+      "file": "agents/documentation-coordinator.md",
+      "priority": 7,
+      "domains": ["documentation", "guides", "knowledge", "writing"],
+      "primary_keywords": ["documentation", "docs", "readme", "guide", "wiki"],
+      "secondary_keywords": ["document", "write", "explain", "tutorial"],
+      "activation_patterns": ["doc.*", "readme.*", "guide.*", "wiki.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["context-manager", "integration-coordinator"],
+      "auto_delegate": true
+    },
+    {
+      "name": "research-specialist",
+      "file": "agents/research-specialist.md",
+      "priority": 8,
+      "domains": ["research", "investigation", "analysis", "solutions"],
+      "primary_keywords": ["research", "investigate", "analyze", "find", "solution"],
+      "secondary_keywords": ["how to", "best way", "current", "latest", "discover"],
+      "activation_patterns": ["research.*", "how.*to.*", "best.*way.*", "find.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["deep-research-issue-fixer", "context-manager"],
+      "auto_delegate": true
+    },
+    {
+      "name": "testing-strategy-coordinator",
+      "file": "agents/testing-strategy-coordinator.md",
+      "priority": 7,
+      "domains": ["testing strategy", "test planning", "coverage", "validation"],
+      "primary_keywords": ["testing strategy", "test plan", "coverage", "validation strategy"],
+      "secondary_keywords": ["test design", "strategy", "crucial tests", "integration testing"],
+      "activation_patterns": ["testing.*strategy.*", "test.*plan.*", "coverage.*"],
+      "activation_threshold": 0.8,
+      "fallback": ["qa-testing-specialist", "research-specialist"],
+      "auto_delegate": true
+    },
+    {
+      "name": "product-manager",
+      "file": "agents/product-manager.md",
+      "priority": 6,
+      "domains": ["product", "strategy", "requirements", "roadmap"],
+      "primary_keywords": ["product", "strategy", "requirements", "roadmap", "business"],
+      "secondary_keywords": ["stakeholder", "feature", "priority", "value"],
+      "activation_patterns": ["product.*", "strategy.*", "requirements.*", "roadmap.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["tech-lead-architect", "project-manager"],
+      "auto_delegate": false
+    },
+    {
+      "name": "project-manager",
+      "file": "agents/project-manager.md",
+      "priority": 6,
+      "domains": ["project", "planning", "coordination", "timeline"],
+      "primary_keywords": ["project", "planning", "sprint", "timeline", "delivery"],
+      "secondary_keywords": ["schedule", "milestone", "track", "coordinate"],
+      "activation_patterns": ["project.*", "sprint.*", "timeline.*", "planning.*"],
+      "activation_threshold": 0.7,
+      "fallback": ["product-manager", "integration-coordinator"],
+      "auto_delegate": false
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-01-03",
+    "total_agents": 15,
+    "auto_delegate_count": 13
+  }
+}

@@ -141,7 +141,7 @@ This is an **Award-Winning Development Team Agents** system - a comprehensive Cl
 
 ## Architecture & Patterns
 
-### Complete AI Software Engineering Team (14 Agents)
+### Complete AI Software Engineering Team (15 Agents)
 
 The system implements a comprehensive software engineering team with specialized workflow optimization agents to solve common Claude Code issues:
 
@@ -149,7 +149,7 @@ The system implements a comprehensive software engineering team with specialized
 - `product-manager`: Strategic planning, requirements definition, feature prioritization, stakeholder communication
 - `project-manager`: Sprint planning, progress tracking, dependency management, team facilitation
 
-**Technical Layer (8 Agents):**
+**Technical Layer (9 Agents):**
 - `tech-lead-architect`: System design, technology decisions, coding standards, technical leadership
 - `frontend-specialist`: Web UI/UX implementation, responsive design, client-side performance optimization
 - `flutter-mobile-development`: Cross-platform mobile apps, native-like experiences, mobile-specific features
@@ -158,6 +158,7 @@ The system implements a comprehensive software engineering team with specialized
 - `qa-testing-specialist`: Automated testing across web and mobile, code quality analysis, cross-platform validation
 - `integration-coordinator`: Cross-agent coordination, knowledge sharing, documentation management, system integration
 - `kurdish-specialist`: Kurdish language integration expert, RTL implementation, Kurdish cultural technology advocate
+- `deep-research-issue-fixer`: Sequential thinking debug specialist, deep web research, root cause analysis, comprehensive issue resolution
 
 **Workflow Optimization Layer (4 Problem-Solving Agents):**
 - `context-manager`: Project memory specialist, session continuity, context preservation across sessions
@@ -253,6 +254,7 @@ The 14-agent team automatically activates based on context and keywords:
 - **QA/Testing Specialist**: Keywords like "testing", "quality assurance", "validation", "automation"
 - **Integration Coordinator**: Keywords like "integration", "coordination", "cross-platform", "documentation"
 - **Kurdish Specialist**: Keywords like "kurdish", "kurdî", "sorani", "RTL", "right-to-left", "Kurdistan", "kurdish text"
+- **Deep Research Issue Fixer**: Keywords like "debug", "error", "issue", "problem", "bug", "broken", "not working", "fails", "crashes", "exception", "stack trace", "investigate", "root cause"
 
 **Workflow Optimization Layer:**
 - **Context Manager**: Keywords like "where were we", "project status", "current state", "context"

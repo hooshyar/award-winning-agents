@@ -1,0 +1,163 @@
+{
+  "rules": [
+    {
+      "id": "debug_issues",
+      "pattern": "(debug|error|issue|problem|bug|broken|not working|fails|crashes|exception|stack trace)",
+      "agent": "deep-research-issue-fixer",
+      "confidence": 0.9,
+      "priority": 10,
+      "fallback": ["qa-testing-specialist", "research-specialist", "tech-lead-architect"],
+      "description": "Route debugging and error resolution requests"
+    },
+    {
+      "id": "flutter_mobile",
+      "pattern": "(flutter|mobile|ios|android|dart|widget|app development)",
+      "agent": "flutter-mobile-development",
+      "confidence": 0.8,
+      "priority": 9,
+      "fallback": ["tech-lead-architect", "frontend-specialist"],
+      "description": "Route Flutter and mobile development requests"
+    },
+    {
+      "id": "kurdish_language",
+      "pattern": "(kurdish|kurdî|sorani|rtl|right.to.left|kurdistan|kurdish text)",
+      "agent": "kurdish-specialist",
+      "confidence": 0.95,
+      "priority": 9,
+      "fallback": ["frontend-specialist", "integration-coordinator"],
+      "description": "Route Kurdish language and RTL development requests"
+    },
+    {
+      "id": "architecture_design",
+      "pattern": "(architecture|system design|scalability|technical leadership|microservices)",
+      "agent": "tech-lead-architect",
+      "confidence": 0.8,
+      "priority": 8,
+      "fallback": ["backend-specialist", "devops-engineer"],
+      "description": "Route system architecture and design requests"
+    },
+    {
+      "id": "frontend_web",
+      "pattern": "(frontend|web development|ui|ux|responsive|html|css|javascript|react|vue|angular)",
+      "agent": "frontend-specialist",
+      "confidence": 0.8,
+      "priority": 8,
+      "fallback": ["tech-lead-architect", "web-creative"],
+      "description": "Route frontend and web development requests"
+    },
+    {
+      "id": "backend_api",
+      "pattern": "(backend|api|database|server|microservice|rest|graphql|sql|nosql)",
+      "agent": "backend-specialist",
+      "confidence": 0.8,
+      "priority": 8,
+      "fallback": ["tech-lead-architect", "devops-engineer"],
+      "description": "Route backend and API development requests"
+    },
+    {
+      "id": "devops_deployment",
+      "pattern": "(devops|deploy|deployment|ci|cd|infrastructure|docker|kubernetes|aws|azure|gcp)",
+      "agent": "devops-engineer",
+      "confidence": 0.8,
+      "priority": 8,
+      "fallback": ["tech-lead-architect", "backend-specialist"],
+      "description": "Route DevOps and deployment requests"
+    },
+    {
+      "id": "testing_qa",
+      "pattern": "(test|testing|qa|quality assurance|automation|unit|integration|e2e|coverage)",
+      "agent": "qa-testing-specialist",
+      "confidence": 0.8,
+      "priority": 8,
+      "fallback": ["deep-research-issue-fixer", "tech-lead-architect"],
+      "description": "Route testing and quality assurance requests"
+    },
+    {
+      "id": "context_management",
+      "pattern": "(context|memory|session|where were we|current state|remember|restore)",
+      "agent": "context-manager",
+      "confidence": 0.8,
+      "priority": 8,
+      "fallback": ["integration-coordinator", "documentation-coordinator"],
+      "description": "Route context and memory management requests"
+    },
+    {
+      "id": "research_investigation",
+      "pattern": "(research|investigate|analyze|find solution|how to|best way|current|latest)",
+      "agent": "research-specialist",
+      "confidence": 0.7,
+      "priority": 8,
+      "fallback": ["deep-research-issue-fixer", "context-manager"],
+      "description": "Route research and investigation requests"
+    },
+    {
+      "id": "documentation",
+      "pattern": "(documentation|docs|readme|guide|wiki|document|write guide|tutorial)",
+      "agent": "documentation-coordinator",
+      "confidence": 0.7,
+      "priority": 7,
+      "fallback": ["context-manager", "integration-coordinator"],
+      "description": "Route documentation and writing requests"
+    },
+    {
+      "id": "testing_strategy",
+      "pattern": "(testing strategy|test plan|test coverage|validation strategy|crucial tests)",
+      "agent": "testing-strategy-coordinator",
+      "confidence": 0.8,
+      "priority": 7,
+      "fallback": ["qa-testing-specialist", "research-specialist"],
+      "description": "Route testing strategy and planning requests"
+    },
+    {
+      "id": "integration_coordination",
+      "pattern": "(integration|coordination|cross.platform|sync|coordinate|manage project)",
+      "agent": "integration-coordinator",
+      "confidence": 0.7,
+      "priority": 7,
+      "fallback": ["tech-lead-architect", "documentation-coordinator"],
+      "description": "Route integration and coordination requests"
+    },
+    {
+      "id": "product_strategy",
+      "pattern": "(product strategy|requirements|roadmap|business value|stakeholder|feature priority)",
+      "agent": "product-manager",
+      "confidence": 0.7,
+      "priority": 6,
+      "fallback": ["tech-lead-architect", "project-manager"],
+      "description": "Route product strategy and planning requests"
+    },
+    {
+      "id": "project_management",
+      "pattern": "(project planning|sprint planning|timeline|delivery|schedule|milestone)",
+      "agent": "project-manager",
+      "confidence": 0.7,
+      "priority": 6,
+      "fallback": ["product-manager", "integration-coordinator"],
+      "description": "Route project management and planning requests"
+    }
+  ],
+  "fallback_strategies": {
+    "no_agent_match": {
+      "complex_task_threshold": 20,
+      "keyword_count_threshold": 5,
+      "use_task_tool": true,
+      "fallback_chain": ["task_tool_general", "direct_execution"]
+    },
+    "low_confidence": {
+      "threshold": 0.6,
+      "strategy": "consult_via_task_tool",
+      "include_multiple_agents": true
+    },
+    "agent_unavailable": {
+      "retry_count": 2,
+      "retry_delay": 1000,
+      "fallback_to_next": true
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-01-03",
+    "total_rules": 15,
+    "coverage": "comprehensive"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "agent_routing": {
+    "enabled": true,
+    "mode": "agent_first",
+    "confidence_threshold": 0.7,
+    "max_agents": 3,
+    "fallback_timeout": 30,
+    "parallel_evaluation": true,
+    "learning_enabled": true,
+    "performance_monitoring": true,
+    "debug_mode": false
+  },
+  "quality_gates": {
+    "minimum_agent_usage": 0.95,
+    "maximum_fallback_rate": 0.05,
+    "response_time_target": 2000,
+    "success_rate_target": 0.98
+  },
+  "optimization": {
+    "cache_agent_matches": true,
+    "learn_from_feedback": true,
+    "adjust_thresholds": true,
+    "parallel_agent_evaluation": true
+  }
+}
